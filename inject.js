@@ -1,4 +1,7 @@
 (() => {
+  if (window.location.href.indexOf('my.dealsandprojects.com') < 0) {
+    return;
+  }
 
   /**
    * catch every links on the page and return them in an array
@@ -18,7 +21,6 @@
    */
   const setTargetBlank = (links) => {
     links.forEach(link => {
-      console.log(link);
       link.setAttribute('target', '_blank');
     });
   };
